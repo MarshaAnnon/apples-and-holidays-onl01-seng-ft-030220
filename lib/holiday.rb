@@ -47,8 +47,12 @@ def add_supply_to_memorial_day(holiday_hash, supply)
   holiday_hash[:spring].each do |holiday, supplies|
     if holiday == :memorial_day
       supplies << supply
+    elsif holiday == :christmas && :new_years
+      supplies << supply
     end
   end
+end
+
 end
 
 
